@@ -11,14 +11,17 @@ class HomePage extends StatelessWidget {
     const String name = 'Rehan';
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Catalog App'),
+        title: const Text(
+          'Catalog App',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
       ),
       body: const Center(
         child: Text('Welcome to $days days of flutter by $name'),
       ),
-      drawer: const MyDrawer(
-
-      ),
+      drawer: const MyDrawer(),
     );
   }
 }
