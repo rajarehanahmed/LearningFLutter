@@ -11,14 +11,20 @@ class ItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Image.network(item.image),
-      title: Text(item.name),
-      subtitle: Text(item.desc),
-      trailing: Text(
-        "\$${item.price}",
-        style: const TextStyle(
-          color: Colors.deepPurple,
+    return Card(
+      child: ListTile(
+        onTap: () {
+          print("${item.name} pressed");
+        },
+        leading: Image.network(item.image),
+        title: Text(item.name),
+        subtitle: Text(item.desc),
+        trailing: Text(
+          "\$${item.price}",
+          style: const TextStyle(
+            color: Colors.deepPurple,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
